@@ -34,21 +34,21 @@
                Grid.Column="2"
                Style="{StaticResource LabelLogoStyle}"/>
         <TextBox Grid.Column="2"
-                 Grid.Row="3"/>
+                 Grid.Row="3" x:Name="LoginTB"/>
         <Label Content="Логин"
                Grid.Column="0"
                Grid.Row="3"
                Style="{DynamicResource LabelNormalStyle}"/>
         <PasswordBox
             Grid.Column="2"
-                 Grid.Row="5"/>
+                 Grid.Row="5" x:Name="PasswordPSB"/>
         <Label Content="Пароль"
                Grid.Column="0"
                Grid.Row="5"
                Style="{DynamicResource LabelNormalStyle}"/>
         <PasswordBox
             Grid.Column="2"
-                 Grid.Row="7"/>
+                 Grid.Row="7" x:Name="RepeatPasswordPSB"/>
         <Label Content="Повторите пароль"
                Grid.Column="0"
                Grid.Row="7"
@@ -56,6 +56,6 @@
         <Button Content="Зарегистрироваться"
                 Foreground="White"
             Grid.ColumnSpan="2"
-            Grid.Row="9"/>
+            Grid.Row="9" x:Name="RegBTN" Click="RegBTN_Click"/>
     </Grid>
 </Window>
