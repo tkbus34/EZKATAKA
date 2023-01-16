@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MollaevYaroshevski.DataFolder
 {
-    public partial class DBEnities : DbContext
+    public partial class DBEntities : DbContext
     {
-        private static DBEnities context;
+        private static DBEntities context;
         
-        public static DBEnities GetContext()
+        public static DBEntities GetContext()
         {
             if (context == null)
-                context = new DBEnities();
+                context = new DBEntities();
             return context;
         }
 

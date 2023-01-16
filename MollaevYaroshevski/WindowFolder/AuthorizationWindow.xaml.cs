@@ -37,7 +37,7 @@ namespace MollaevYaroshevski.WindowFolder
             {
                 try
                 {
-                    var user = DBEnities.GetContext().User.FirstOrDefault(u => u.Login == LOginText.Text);
+                    var user = DBEntities.GetContext().User.FirstOrDefault(u => u.Login == LOginText.Text);
                     if (user == null)
                     {
                         MBClass.ErrorMB("Incorect Login");
@@ -53,7 +53,7 @@ namespace MollaevYaroshevski.WindowFolder
                         switch (user.IdRole)
                         {
                             case 1:
-                                new admin().Show();
+                               new AdminWindow().Show();
                                 break;
                             case 2:
                                 MBClass.InfoMB("Rab");
@@ -66,6 +66,11 @@ namespace MollaevYaroshevski.WindowFolder
 
                 }
             }
+        }
+
+        private void RegBTN_Click(object sender, RoutedEventArgs e)
+        {
+            new RegistrationWindow().Show();
         }
     }
 }

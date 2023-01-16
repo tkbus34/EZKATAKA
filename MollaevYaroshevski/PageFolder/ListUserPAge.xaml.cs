@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MollaevYaroshevski.WindowFolder
+namespace MollaevYaroshevski.PageFolder
 {
     /// <summary>
-    /// Логика взаимодействия для admin.xaml
+    /// Логика взаимодействия для ListUserPAge.xaml
     /// </summary>
-    public partial class admin : Window
+    public partial class ListUserPAge : Page
     {
-        public admin()
+        public ListUserPAge()
         {
             InitializeComponent();
         }

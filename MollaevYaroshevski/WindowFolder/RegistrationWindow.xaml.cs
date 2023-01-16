@@ -33,7 +33,7 @@ namespace MollaevYaroshevski.WindowFolder
                 MBClass.ErrorMB("Login");
                 LoginTB.Focus();
             }
-            else if(DBEnities.GetContext().User.FirstOrDefault(u=>u.Login==LoginTB.Text) != null)
+            else if(DBEntities.GetContext().User.FirstOrDefault(u=>u.Login==LoginTB.Text) != null)
             {
                 MBClass.ErrorMB("Существует");
                 LoginTB.Focus();
@@ -49,7 +49,23 @@ namespace MollaevYaroshevski.WindowFolder
             }
             else
             {
+                try
+                {
+                    DBEntities.GetContext().User.Add(new User()
+                    {
+                        Login=LoginTB.Text,
+                        Password=PasswordPSB.Password,
+                        IdRole=2
+                    });
 
+                    DBEntities.GetContext().SaveChanges();
+                    MBClass.InfoMB("Успешно");
+                }
+                catch ( Exception ex)
+                {
+                    
+                    MBClass.ErrorMB(ex);
+                }
             }
         }
     }

@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:MollaevYaroshevski.WindowFolder"
         mc:Ignorable="d"
         Title="Окно авторизации" 
-        Height="380" Width="400"
-        MaxHeight="380" MaxWidth="400"
-        MinHeight="380" MinWidth="400"
+        Height="450" Width="400"
+ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -49,5 +48,9 @@
                 Foreground="White"
             Grid.ColumnSpan="2"
             Grid.Row="7" Click="LoginBTN_Click"/>
+        <Button Content="Регестрация" x:Name="RegBTN"
+                Foreground="White"
+            Grid.ColumnSpan="2"
+            Grid.Row="7" Click="RegBTN_Click" Margin="16,78,12,-50"/>
     </Grid>
 </Window>
